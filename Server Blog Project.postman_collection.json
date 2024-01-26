@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "ebe3f029-4ed6-4f29-8861-8b0730d00544",
+		"name": "Server Blog Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30398899",
+		"_collection_link": "https://galactic-meteor-111191.postman.co/workspace/SBD-SEP-2023~fe8c2312-84f0-4978-a2af-55fa4a6cafdf/collection/30398899-ebe3f029-4ed6-4f29-8861-8b0730d00544?action=share&source=collection_link&creator=30398899"
+	},
+	"item": [
+		{
+			"name": "Server Blog All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"post_id\": 1,\n            \"title\": \"First Blog Post\",\n            \"author\": \"Paul Niemczyk\",\n            \"body\": \"These student devs keep getting younger and smarter\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/serverBlog/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"serverBlog",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Blog Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"post_id\": 1,\n            \"title\": \"First Blog Post\",\n            \"author\": \"Paul Niemczyk\",\n            \"body\": \"These student devs keep getting younger and smarter\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/serverBlog/delete/:post_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"serverBlog",
+						"delete",
+						":post_id"
+					],
+					"variable": [
+						{
+							"key": "post_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Blog Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"post_id\": 1,\n            \"title\": \"First Blog Post\",\n            \"author\": \"Paul Niemczyk\",\n            \"body\": \"These student devs keep getting younger and smarter\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/serverBlog/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"serverBlog",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Blog ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"post_id\": 1,\n            \"title\": \"First Blog Post\",\n            \"author\": \"Paul Niemczyk\",\n            \"body\": \"These student devs keep getting younger and smarter\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/serverBlog/get-id/:post_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"serverBlog",
+						"get-id",
+						":post_id"
+					],
+					"variable": [
+						{
+							"key": "post_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Blog Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"post_id\": 2,\n            \"title\": \"Updated\",\n            \"author\": \"Paul Niemczyk\",\n            \"body\": \"These student devs keep getting younger and smarter\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/serverBlog/update/2?=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"serverBlog",
+						"update",
+						"2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
